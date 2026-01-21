@@ -1,0 +1,11 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "request": "launch",
+      "command": "bun dev",
+      "type": "node-terminal",
+      "name": "NEXT Debugger"
+    }
+  ]
+}

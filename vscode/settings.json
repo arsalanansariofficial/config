@@ -29,7 +29,6 @@
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmPasteNative": false,
   "editor.accessibilitySupport": "off",
-  "workbench.statusBar.visible": false,
   "workbench.sideBar.location": "right",
   "window.menuBarVisibility": "compact",
   "editor.parameterHints.enabled": false,
@@ -40,9 +39,8 @@
   "workbench.list.openMode": "doubleClick",
   "editor.suggestSelection": "recentlyUsed",
   "editor.cursorSmoothCaretAnimation": "on",
-  "scm.repositories.selectionMode": "single",
-  "workbench.activityBar.location": "hidden",
   "workbench.colorTheme": "Catppuccin Frappé",
+  "liveServer.settings.root": "/sub_modules/",
   "liveServer.settings.donotShowInfoMsg": true,
   "postman.mcp.notifications.postmanMCP": false,
   "files.exclude": { "**/vendor/uims/**": true },
@@ -65,7 +63,6 @@
   "terminal.integrated.fontFamily": "MesloLGL Nerd Font Mono",
   "typescript.preferences.includePackageJsonAutoImports": "on",
   "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
-  "[php]": { "editor.defaultFormatter": "bmewburn.vscode-intelephense-client" },
   "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'zero', 'onum'",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always",
@@ -84,5 +81,22 @@
     "/tmp/postman-http-request-pre-request.instructions.md": true,
     "/tmp/postman-collections-post-response.instructions.md": true,
     "/tmp/postman-http-request-post-response.instructions.md": true
-  }
+  },
+  "github.copilot.enable": {
+    "*": false,
+    "scminput": false,
+    "markdown": false,
+    "plaintext": false
+  },
+  "editor.guides.bracketPairs": true,
+  "editor.autoClosingQuotes": "never",
+  "editor.autoClosingBrackets": "never",
+  "scm.repositories.selectionMode": "single",
+
+  "php-cs-fixer.allowRisky": true,
+  "intelephense.format.enable": false,
+  "[php]": { "editor.defaultFormatter": "junstyle.php-cs-fixer" },
+  "php-cs-fixer.config": "/srv/http/samarth/uims_newtheme/.php-cs-fixer.php",
+  "php-cs-fixer.executablePath": "/srv/http/samarth/uims_newtheme/vendor/bin/php-cs-fixer",
+  "workbench.statusBar.visible": false
 }
