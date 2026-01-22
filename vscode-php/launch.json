@@ -1,0 +1,11 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "port": 9003,
+      "type": "php",
+      "request": "launch",
+      "name": "PHP Debugger"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "arsalanansari/samarth",
+  "authors": [
+    {
+      "name": "arsalan.ansari",
+      "email": "arsalan.ansari@samarth.ac.in"
+    }
+  ],
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.75",
+    "phpstan/phpstan": "^2.1",
+    "rector/rector": "^2.3"
+  }
+}
