@@ -6,12 +6,7 @@
 {
   "version": "0.2.0",
   "configurations": [
-    {
-      "port": 9003,
-      "type": "php",
-      "request": "launch",
-      "name": "PHP Debugger"
-    }
+    { "port": 9003, "type": "php", "request": "launch", "name": "PHP Debugger" }
   ]
 }
 ```
@@ -70,6 +65,8 @@ git shortlog -s -n --all // Shows contributors each contributors with their comm
 git shortlog -s -n branch_name // Shows contributors each contributors with their commit count in the specified branch
 
 git commit --amend --no-edit --date="2025-01-01 14:30:00" // Change only the date of a commit
+
+GIT_AUTHOR_DATE="2023-02-19T12:00:00" GIT_COMMITTER_DATE="2023-02-19T12:00:00" git commit --amend --no-edit --date "2023-02-19T12:00:00" // To make the commiter date and the author date to be the same
 ```
 
 # Migrations
@@ -83,6 +80,12 @@ php yii migrate/up --migrationPath=@app/vendor/uims/estate/src/modules/estate/mi
 
 php yii migrate/create test_migration --migrationPath=@app/vendor/uims/ehousing/src/modules/ehousing/migrations                    // EHOUSING
 php yii migrate/up --migrationPath=@app/vendor/uims/ehousing/src/modules/ehousing/migrations --migrationTable=ehousing_migration_history                                                                                        // EHOUSING
+```
+
+# Yii Cron
+
+```bash
+php yii queue/run
 ```
 
 # CRUD Generator
@@ -114,4 +117,6 @@ sudo btrfs property set -f /mnt ro false                                        
 //.*$                                    // To find all single line comments
 /\*[\s\S]*?\*/                           // To find all multiline comments
 /\*\*[\s\S]*?\*/                         // To find all php-doc comments (Note: you have to add a new line \n character in the end of the regex)
+<!--[\s\S]*?-->                          // To find all html comments
+<\?php\s*//[\s\S]*?\?>                   // To find all comments inside php block
 ```
