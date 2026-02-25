@@ -60,11 +60,13 @@ git shortlog -s -n // Shows contributors each contributors with their commit cou
 
 git shortlog -s -n --author="Author Name" // To count the number of commits by Author Name
 
+git commit --amend --no-edit --date="2025-01-01 14:30:00" // Change only the date of a commit
+
 git shortlog -s -n --all // Shows contributors each contributors with their commit count in the whole repository
 
 git shortlog -s -n branch_name // Shows contributors each contributors with their commit count in the specified branch
 
-git commit --amend --no-edit --date="2025-01-01 14:30:00" // Change only the date of a commit
+git apply --3way maintenance-menu-items.patch // If the structure of the patch created does not match the structure to which the patch has been applied
 
 GIT_AUTHOR_DATE="2023-02-19T12:00:00" GIT_COMMITTER_DATE="2023-02-19T12:00:00" git commit --amend --no-edit --date "2023-02-19T12:00:00" // To make the commiter date and the author date to be the same
 ```
