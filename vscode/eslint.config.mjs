@@ -169,6 +169,10 @@ const eslintConfig = [
         'error',
         { order: 'asc', type: 'natural' }
       ],
+      'perfectionist/sort-named-imports': [
+        'error',
+        { order: 'asc', type: 'natural' }
+      ],
       'perfectionist/sort-objects': [
         'error',
         { order: 'asc', type: 'natural' }
