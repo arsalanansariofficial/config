@@ -39,7 +39,6 @@ return new PhpCsFixer\Config()
     'multiline_comment_opening_closing'                => true,
     'no_empty_comment'                                 => true,
     'single_line_comment_spacing'                      => true,
-    'control_structure_braces'                         => true,
     'elseif'                                           => true,
     'empty_loop_body'                                  => true,
     'empty_loop_condition'                             => true,
