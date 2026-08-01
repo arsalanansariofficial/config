@@ -15,6 +15,10 @@ export default defineConfig([
   js.configs.recommended,
   {
     rules: {
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        { argsIgnorePattern: '^_', args: 'all' }
+      ],
       'react-refresh/only-export-components': 'off',
       'arrow-body-style': ['error', 'as-needed'],
       'no-unused-private-class-members': 'error',
@@ -43,7 +47,6 @@ export default defineConfig([
       'class-methods-use-this': 'error',
       'grouped-accessor-pairs': 'error',
       'no-useless-constructor': 'error',
-      'require-atomic-updates': 'error',
       'array-callback-return': 'error',
       'no-constant-condition': 'error',
       'no-constructor-return': 'error',
@@ -61,8 +64,6 @@ export default defineConfig([
       'prefer-arrow-callback': 'error',
       'prefer-object-has-own': 'error',
       'prefer-regex-literals': 'error',
-      'capitalized-comments': 'error',
-      'max-classes-per-file': 'error',
       'no-array-constructor': 'error',
       'no-case-declarations': 'error',
       'no-duplicate-imports': 'error',
@@ -87,7 +88,6 @@ export default defineConfig([
       'prefer-rest-params': 'error',
       'constructor-super': 'error',
       'default-case-last': 'error',
-      'init-declarations': 'error',
       'no-duplicate-case': 'error',
       'no-empty-function': 'error',
       'no-invalid-regexp': 'error',
@@ -139,6 +139,7 @@ export default defineConfig([
       'no-script-url': 'error',
       'no-undef-init': 'error',
       'prefer-spread': 'error',
+      'no-unused-vars': 'off',
       'default-case': 'error',
       'dot-notation': 'error',
       'guard-for-in': 'error',
@@ -150,7 +151,6 @@ export default defineConfig([
       'no-loop-func': 'error',
       'no-multi-str': 'error',
       'no-obj-calls': 'error',
-      'no-redeclare': 'error',
       'no-sequences': 'error',
       'prefer-const': 'error',
       'valid-typeof': 'error',
@@ -158,6 +158,7 @@ export default defineConfig([
       'no-iterator': 'error',
       'no-new-func': 'error',
       'vars-on-top': 'error',
+      'no-redeclare': 'off',
       'no-bitwise': 'error',
       'no-eq-null': 'error',
       'no-caller': 'error',
@@ -175,7 +176,7 @@ export default defineConfig([
       eqeqeq: 'error'
     },
     languageOptions: {
-      globals: { ...globals.browser, ...globals.node },
+      globals: { ...globals.browser, ...globals.node, ...globals.bunBuiltin },
       ecmaVersion: 'latest'
     }
   }
