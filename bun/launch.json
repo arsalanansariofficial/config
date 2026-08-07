@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "program": "${workspaceFolder}/src/server.ts",
+      "cwd": "${workspaceFolder}",
+      "request": "launch",
+      "name": "Debug Bun",
+      "runtime": "bun",
+      "type": "bun"
+    },
+    {
+      "program": "${workspaceFolder}/path/to/test",
+      "cwd": "${workspaceFolder}",
+      "name": "Debug Bun Test",
+      "request": "launch",
+      "args": ["test"],
+      "type": "bun"
+    }
+  ]
+}
