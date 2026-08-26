@@ -1,4 +1,120 @@
 {
+  // Editor
+  "editor.codeActionsOnSave": {
+    "source.removeUnusedImports": "always",
+    "source.fixAll.stylelint": "always",
+    "source.sortPackageJson": "always",
+    "source.fixAll.eslint": "always",
+    "source.fixAll.ts": "always"
+  },
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.suggest.selectionMode": "whenQuickSuggestion",
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.suggestSelection": "recentlyUsed",
+  "editor.parameterHints.enabled": false,
+  "editor.guides.bracketPairs": "active",
+  "editor.autoClosingBrackets": "never",
+  "editor.minimap.showSlider": "always",
+  "editor.fontFamily": "Cascadia Code",
+  "editor.autoClosingQuotes": "never",
+  "editor.guides.indentation": false,
+  "editor.cursorBlinking": "expand",
+  "editor.suggest.showWords": false,
+  "editor.lineNumbers": "relative",
+  "editor.autoIndentOnPaste": true,
+  "editor.smoothScrolling": true,
+  "editor.mouseWheelZoom": true,
+  "editor.fontLigatures": true,
+  "editor.linkedEditing": true,
+  "editor.wordWrap": "on",
+  "editor.fontSize": 19,
+  "editor.tabSize": 2,
+
+  // Workbench
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "workbench.editor.enablePreviewFromQuickOpen": true,
+  "workbench.colorTheme": "Catppuccin Frappé",
+  "workbench.activityBar.location": "hidden",
+  "workbench.browser.showInTitleBar": false,
+  "workbench.layoutControl.enabled": false,
+  "workbench.list.openMode": "doubleClick",
+  "workbench.editor.enablePreview": false,
+  "workbench.list.smoothScrolling": true,
+  "workbench.sideBar.location": "right",
+  "workbench.reduceTransparency": "on",
+  "workbench.statusBar.visible": false,
+  "workbench.editor.useModal": "off",
+  "workbench.startupEditor": "none",
+  "workbench.reduceMotion": "on",
+
+  // Terminal
+  "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font Mono",
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "terminal.integrated.defaultLocation": "editor",
+  "terminal.integrated.mouseWheelZoom": true,
+  "terminal.integrated.initialHint": false,
+  "terminal.integrated.fontSize": 20,
+
+  // Window
+  "window.menuBarVisibility": "compact",
+  "window.restoreFullscreen": true,
+  "window.commandCenter": false,
+  "window.zoomPerWindow": false,
+  "window.zoomLevel": 2,
+
+  // Git
+  "git.replaceTagsWhenPull": true,
+  "git.enableSmartCommit": true,
+  "git.allowForcePush": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+
+  // Files
+  "files.trimTrailingWhitespace": true,
+  "files.simpleDialog.enable": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+
+  // Diff Editor
+  "diffEditor.useInlineViewWhenSpaceIsLimited": false,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "diffEditor.renderSideBySide": true,
+
+  // Explorer
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmPasteNative": false,
+  "explorer.confirmDelete": false,
+
+  // JavaScript/TypeScript
+  "js/ts.preferences.includePackageJsonAutoImports": "on",
+  "js/ts.updateImportsOnFileMove.enabled": "always",
+
+  // Editor Security
+  "security.workspace.trust.untrustedFiles": "open",
+
+  // SCM
+  "scm.repositories.selectionMode": "single",
+
+  // Copilot Chat
+  "chat.instructionsFilesLocations": {
+    ".github/instructions": true,
+    ".claude/rules": true,
+    "~/.copilot/instructions": true,
+    "~/.claude/rules": true,
+    "~/../../tmp/postman-http-request-post-response.instructions.md": true,
+    "~/../../tmp/postman-collections-post-response.instructions.md": true,
+    "~/../../tmp/postman-http-request-pre-request.instructions.md": true,
+    "~/../../tmp/postman-collections-pre-request.instructions.md": true,
+    "~/../../tmp/postman-folder-post-response.instructions.md": true,
+    "~/../../tmp/postman-folder-pre-request.instructions.md": true
+  },
+  "chat.titleBar.openInAgentsWindow.enabled": false,
+
+  // JSON
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "json.schemaDownload.trustedDomains": {
     "https://raw.githubusercontent.com/devcontainers/spec/": true,
     "https://raw.githubusercontent.com/microsoft/vscode/": true,
@@ -7,105 +123,46 @@
     "https://raw.githubusercontent.com": true,
     "https://json.schemastore.org/": true,
     "https://www.schemastore.org/": true,
-    "https://json-schema.org/": true,
-    "https://ui.shadcn.com": true
+    "https://json-schema.org/": true
   },
+
+  // GitHub Copilot
   "github.copilot.enable": {
-    "javascript": false,
+    "typescript": false,
     "plaintext": false,
     "markdown": false,
     "scminput": false,
-    "json": false,
     "*": false
   },
-  "editor.tokenColorCustomizations": {
-    "textMateRules": [
-      { "scope": ["source", "text.html"], "settings": { "fontStyle": "" } }
-    ]
-  },
-  "editor.codeActionsOnSave": {
-    "source.sortPackageJson": "always",
-    "source.fixAll.eslint": "always"
-  },
-  "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'zero', 'onum'",
-  "[php]": { "editor.defaultFormatter": "junstyle.php-cs-fixer" },
-  "php-cs-fixer.executablePath": "./vendor/bin/php-cs-fixer",
-  "terminal.integrated.enableMultiLinePasteWarning": "never",
-  "[prisma]": { "editor.defaultFormatter": "Prisma.prisma" },
-  "[c]": { "editor.defaultFormatter": "ms-vscode.cpptools" },
-  "[lua]": { "editor.defaultFormatter": "yinfei.luahelper" },
-  "workbench.secondarySideBar.defaultVisibility": "hidden",
-  "[sql]": { "editor.defaultFormatter": "mtxr.sqltools" },
-  "js/ts.preferences.includePackageJsonAutoImports": "on",
-  "js/ts.implicitProjectConfig.strictNullChecks": false,
-  "editor.suggest.selectionMode": "whenQuickSuggestion",
-  "diffEditor.useInlineViewWhenSpaceIsLimited": false,
-  "workbench.editor.enablePreviewFromQuickOpen": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "security.workspace.trust.untrustedFiles": "open",
-  "editor.gotoLocation.multipleDefinitions": "goto",
-  "js/ts.updateImportsOnFileMove.enabled": "always",
-  "terminal.integrated.defaultLocation": "editor",
+
+  // Postman
+  "postman.settings.dotenv-detection-notification-visibility": false,
   "postman.mcp.notifications.postmanMCP": false,
-  "liveServer.settings.donotShowInfoMsg": true,
-  "liveServer.settings.root": "/sub_modules/",
-  "php-cs-fixer.config": "/.php-cs-fixer.php",
-  "workbench.colorTheme": "Catppuccin Mocha",
-  "scm.repositories.selectionMode": "single",
-  "terminal.integrated.mouseWheelZoom": true,
-  "workbench.activityBar.location": "hidden",
-  "editor.suggestSelection": "recentlyUsed",
-  "editor.cursorSmoothCaretAnimation": "on",
-  "workbench.layoutControl.enabled": false,
-  "workbench.list.openMode": "doubleClick",
-  "terminal.integrated.initialHint": false,
-  "diffEditor.ignoreTrimWhitespace": true,
-  "workbench.editor.enablePreview": false,
-  "editor.parameterHints.enabled": false,
-  "editor.fontFamily": "'Cascadia Code'",
-  "workbench.sideBar.location": "right",
-  "window.menuBarVisibility": "compact",
-  "editor.autoClosingBrackets": "never",
-  "explorer.confirmDragAndDrop": false,
-  "explorer.confirmPasteNative": false,
-  "editor.accessibilitySupport": "off",
-  "workbench.statusBar.visible": false,
-  "css.lint.unknownAtRules": "ignore",
-  "diffEditor.renderSideBySide": true,
-  "editor.autoClosingQuotes": "never",
-  "intelephense.format.enable": false,
-  "settingsSync.ignoredSettings": [],
   "postman.telemetry.enabled": false,
-  "editor.guides.bracketPairs": true,
-  "terminal.integrated.fontSize": 17,
-  "prettier.objectWrap": "collapse",
-  "workbench.startupEditor": "none",
-  "editor.suggest.showWords": false,
-  "files.simpleDialog.enable": true,
-  "editor.cursorBlinking": "expand",
-  "prettier.trailingComma": "none",
-  "prettier.bracketSameLine": true,
-  "prettier.jsxSingleQuote": true,
-  "prettier.arrowParens": "avoid",
-  "explorer.confirmDelete": false,
-  "php-cs-fixer.allowRisky": true,
-  "git.replaceTagsWhenPull": true,
-  "editor.smoothScrolling": true,
-  "git.enableSmartCommit": true,
-  "editor.mouseWheelZoom": true,
-  "window.commandCenter": false,
-  "window.zoomPerWindow": false,
-  "eslint.format.enable": true,
-  "editor.linkedEditing": true,
-  "prettier.singleQuote": true,
-  "js/ts.suggest.paths": false,
-  "mdb.confirmRunAll": false,
-  "mdb.mcp.server": "prompt",
-  "git.confirmSync": false,
-  "editor.wordWrap": "on",
-  "update.mode": "manual",
-  "git.autofetch": true,
-  "editor.fontSize": 19,
-  "window.zoomLevel": 2,
-  "editor.tabSize": 2
+
+  // HTML
+  "html.format.indentHandlebars": true,
+  "html.format.indentInnerHtml": true,
+  "html.format.templating": true,
+
+  // CSS
+  "css.format.spaceAroundSelectorSeparator": true,
+
+  // Live Server
+  "liveServer.settings.donotShowInfoMsg": true,
+
+  // Debugger
+  "debug.terminal.clearBeforeReusing": true,
+
+  // Accessibility
+  "accessibility.underlineLinks": true,
+
+  // Error Lens
+  "errorLens.fontStyleItalic": true,
+
+  // Markdown
+  "markdown.validate.enabled": true,
+
+  // Eslint
+  "eslint.format.enable": true
 }
