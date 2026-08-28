@@ -9,6 +9,7 @@
   },
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.suggest.selectionMode": "whenQuickSuggestion",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.suggestSelection": "recentlyUsed",
@@ -112,9 +113,6 @@
   "chat.titleBar.openInAgentsWindow.enabled": false,
 
   // JSON
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "json.schemaDownload.trustedDomains": {
     "https://raw.githubusercontent.com/devcontainers/spec/": true,
     "https://raw.githubusercontent.com/microsoft/vscode/": true,
