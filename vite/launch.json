@@ -1,0 +1,11 @@
+{
+  "configurations": [
+    {
+      "webRoot": "${workspaceFolder}",
+      "url": "http://localhost:5173",
+      "type": "editor-browser",
+      "name": "Debug Vite",
+      "request": "launch"
+    }
+  ]
+}
