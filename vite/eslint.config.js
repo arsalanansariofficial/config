@@ -1,23 +1,32 @@
 import { globalIgnores, defineConfig } from 'eslint/config';
 import perfectionist from 'eslint-plugin-perfectionist';
-import reactRefresh from 'eslint-plugin-react-refresh';
-import reactHooks from 'eslint-plugin-react-hooks';
+import tsParser from '@typescript-eslint/parser';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
+import drizzle from 'eslint-plugin-drizzle';
 import tseslint from 'typescript-eslint';
 import globals from 'globals';
 import js from '@eslint/js';
 
 export default defineConfig([
   perfectionist.configs['recommended-line-length'],
-  reactHooks.configs.flat.recommended,
+  jsxA11y.flatConfigs.recommended,
   tseslint.configs.recommended,
-  reactRefresh.configs.vite,
   globalIgnores(['dist']),
   js.configs.recommended,
   {
     rules: {
+      ...drizzle.configs.all.rules,
       '@typescript-eslint/no-unused-vars': [
         'error',
         { argsIgnorePattern: '^_', args: 'all' }
+      ],
+      'drizzle/enforce-delete-with-where': [
+        'error',
+        { drizzleObjectName: 'db' }
+      ],
+      'drizzle/enforce-update-with-where': [
+        'error',
+        { drizzleObjectName: 'db' }
       ],
       'react-refresh/only-export-components': 'off',
       'arrow-body-style': ['error', 'as-needed'],
@@ -47,6 +56,7 @@ export default defineConfig([
       'class-methods-use-this': 'error',
       'grouped-accessor-pairs': 'error',
       'no-useless-constructor': 'error',
+      'prefer-arrow-callback': 'error',
       'array-callback-return': 'error',
       'no-constant-condition': 'error',
       'no-constructor-return': 'error',
@@ -61,7 +71,6 @@ export default defineConfig([
       'no-restricted-imports': 'error',
       'no-unused-expressions': 'error',
       'no-useless-assignment': 'error',
-      'prefer-arrow-callback': 'error',
       'prefer-object-has-own': 'error',
       'prefer-regex-literals': 'error',
       'no-array-constructor': 'error',
@@ -175,8 +184,16 @@ export default defineConfig([
       eqeqeq: 'error'
     },
     languageOptions: {
-      globals: { ...globals.browser, ...globals.node, ...globals.bunBuiltin },
-      ecmaVersion: 'latest'
-    }
+      globals: {
+        ...globals.bunBuiltin,
+        ...globals.browser,
+        ...globals.node,
+        NodeJS: 'readonly'
+      },
+      parserOptions: { project: 'tsconfig.json' },
+      ecmaVersion: 'latest',
+      parser: tsParser
+    },
+    plugins: { drizzle }
   }
 ]);
